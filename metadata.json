@@ -1,0 +1,7 @@
+{
+  "name": "Trill Translate",
+  "description": "Creation by Brian Cross. Real-time multilingual live translation with Samsung default live transcription, dictionary pronunciation, 180° face-to-face mode, AR Camera OCR translation overlay, advanced audio waves, AI Explain, and Trill AI Chat Bot.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
