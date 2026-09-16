@@ -8,7 +8,6 @@ import {
 } from "../types";
 import { SpeechManager } from "../services/SpeechManager";
 import { TranslationEngine } from "../services/TranslationEngine";
-import { PWAInstallButton } from "../components/PWAInstallButton";
 import {
   Check,
   CheckCircle2,
@@ -527,39 +526,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
         </div>
       </div>
 
-      {/* 5. PROGRESSIVE WEB APP (PWA) & OFFLINE ENGINE */}
-      <div id="pwa-settings-card" className="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 shadow-xl backdrop-blur-md flex flex-col gap-4">
-        <div className="flex items-center gap-2.5">
-          <div className="w-9 h-9 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-            <Smartphone className="w-5 h-5" />
-          </div>
-          <div>
-            <h2 className="text-sm font-bold text-slate-100 uppercase tracking-wide">
-              Progressive Web App (PWA) & Offline
-            </h2>
-            <p className="text-[11px] text-slate-400">
-              Install Trill directly onto your device home screen for standalone offline use
-            </p>
-          </div>
-        </div>
-
-        <div className="space-y-3">
-          <PWAInstallButton variant="settings" />
-
-          <div className="grid grid-cols-2 gap-2 text-[11px]">
-            <div className="bg-slate-950/40 border border-slate-800/80 p-2.5 rounded-xl flex flex-col gap-0.5">
-              <span className="text-slate-400 font-medium">Service Worker Cache</span>
-              <span className="text-emerald-400 font-mono font-semibold">Active & Pre-cached</span>
-            </div>
-            <div className="bg-slate-950/40 border border-slate-800/80 p-2.5 rounded-xl flex flex-col gap-0.5">
-              <span className="text-slate-400 font-medium">Offline Translation</span>
-              <span className="text-emerald-400 font-mono font-semibold">0ms Local Dict Ready</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 6. CONNECTED SYNC DEVICES & E2EE KEY CARD */}
+      {/* 5. CONNECTED SYNC DEVICES & E2EE KEY CARD */}
       <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-5 shadow-xl backdrop-blur-md flex flex-col gap-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">

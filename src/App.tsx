@@ -17,8 +17,6 @@ import { CameraTranslateScreen } from "./screens/CameraTranslateScreen";
 import { TrillAiScreen } from "./screens/TrillAiScreen";
 import { HistoryScreen } from "./screens/HistoryScreen";
 import { SettingsScreen } from "./screens/SettingsScreen";
-import { PWAInstallButton } from "./components/PWAInstallButton";
-import { OfflineIndicator } from "./components/OfflineIndicator";
 import {
   Mic,
   Camera,
@@ -325,32 +323,21 @@ export default function App() {
       {/* Top App Header */}
       <header
         id="app_top_bar"
-        className="sticky top-0 z-30 w-full bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80 px-3 sm:px-4 py-2 flex items-center justify-between gap-2"
+        className="sticky top-0 z-30 w-full bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80 px-4 py-2.5 flex items-center justify-between"
       >
-        <div className="flex items-center gap-2.5">
-          <img
-            src="/icons/icon-192.png"
-            alt="Trill icon"
-            className="w-8 h-8 rounded-xl border border-emerald-500/30 shadow-md shadow-emerald-950/40 object-cover"
-          />
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <h1 className="text-sm sm:text-base font-black tracking-wider bg-gradient-to-r from-teal-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent uppercase leading-tight">
-                TRILL TRANSLATE
-              </h1>
-              <span className="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
-                <Cpu className="w-3 h-3" />
-                <span>Samsung Live Transcribe</span>
-              </span>
-            </div>
-            <p className="text-[10px] font-medium text-slate-400 tracking-wide leading-none">
-              Creation by Brian Cross
-            </p>
+        <div className="flex flex-col items-center mx-auto text-center">
+          <div className="flex items-center gap-2">
+            <h1 className="text-base sm:text-lg font-black tracking-wider bg-gradient-to-r from-teal-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent uppercase">
+              TRILL TRANSLATE
+            </h1>
+            <span className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-teal-500/15 border border-teal-500/30 text-teal-300 text-[10px] font-bold">
+              <Cpu className="w-3 h-3" />
+              <span>Samsung Live Transcribe</span>
+            </span>
           </div>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <PWAInstallButton variant="header" />
+          <p className="text-[10px] sm:text-[11px] font-semibold text-slate-400 tracking-wide">
+            Creation by Brian Cross
+          </p>
         </div>
       </header>
 
@@ -487,9 +474,6 @@ export default function App() {
           })}
         </div>
       </nav>
-
-      {/* PWA Offline Banner */}
-      <OfflineIndicator />
     </PspWaveBackground>
   );
 }
